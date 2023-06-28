@@ -1,0 +1,171 @@
+O ambiente Web Cliente X servidor e as tecnologias TEMA 1
+
+***Cliente x Modelo***
+-interfaces com design responsivo (ABORDAGEM MOBILE FIRST)
+-criada em 1970 - Xero Parc
+-Mainframe - Compuratores de grande porte (Centralizado)
+
+***Aplicações no modelo cliente x servidor***
+-arquietura distribuída 
+-desenvolvimento em camadas
+
+***Modelo duas camadas***
+-sistemas gerenciadores de banco de dados (SGDB)
+ex: vários computadores que se comunicam com um servidor na mesma rede.
+
+***Modelo três camadas(Modelo de rede)***
+-camada de aplicação
+-CAMADA DE APRESENTAÇÃO: interface com o usuário
+-CAMADA APLICAÇÃO: contém as lógicas e regras e controle de acesso ao servidor de dados
+-CAMADA DADOS: servidor e armazenamento de dados
+
+A arquitetura de 4 camadas não pode ser confundida com a arquitetura MVC (Model, view and Controller)
+É uma arquitetura de software que divide o aplicativo em 3.
+
+Tem normalmente um servidor de banco de dados (servidor de persistência), um servidor de aplicações que tem 
+arquitetura de objetos distribuídos que permite gerenciar as regras de negócio e um cliente, que pode ser cliente
+gráfico (GUI).
+
+Ex de 3 camadas: CORBA, MIDAS. (Objetos distribuídos).
+
+Servidores de aplicações com interface WEB.
+
+***Modelo quatro camadas*** 
+-É uma arquitetura de REDE que comporta a arquitetura de SOFTWARE MVC.
+-tira da máquina cliente a responsabilidade pela interface com o usuário
+-centralizado no servidor web
+-aplicações hospedadas em servidores web a partir de navegadores
+-cliente x servidor (composto por três servidores- o de aplicações, o de dados e o web. O último é 
+responsável pela apresentação/interface com o usuário cliente.
+-Enterprise java bean(servidor de aplicação de negócio.)
+-Framework: SPRING.
+-Plataformas que trabalhar com este modelo: JBOSS, WidlFly, GlassFish. 
+Dentro deles também trabalham com servidor web. Apache e TomCAT(Esse é o principal) como módulo.
+
+***Ambiente WEB***
+-provê aos clientes e usuários várias aplicações a partir de diversos dispositivos, como navegadores
+em desktops e smartphones.
+-IMPORTANTE: quando se fala em ambiente Web: a comunicação.
+-o ambiente é composto de cliente e servidor web
+
+***Comunicação no ambiente WEB***
+-comunicação feita sobre a internet com o uso dos seus protocolos de comunicação.
+-principal HTTP (Hyper text Transfer protocol)
+-um lado faz a requisição, do outro o servidor processando a requisição e respondendo ao cliente
+o que foi solicitado e no meio a internet.
+-Client site X server side: duas expressões comuns quando falamos de aplicações rodando no ambiente web
+Ambas se referem a tecnologias e códigos disponibilizados no lado cliente e no lado servidor.
+
+***2 - Conceito de Interface***
+- IHC - Interação humano-computador
+-pode ser descrito como o estudo da interação entre pessoas e computadores
+-chamada de interface do utilizador
+-Interfaces Gráficas (GUI - Graphical User Interface)
+
+***A interface do lado cliente***
+-garantir usabilidade (uso fácil dos sistemas)
+
+***Conceito do design responsivo***
+-a página web ou aplicação deve se ajustar ao tamanho ta tela que o usuário está usando.
+-layouts fluidos, media query e scripts
+-Layout Fluido:uso de unidades flexíveis
+Em vez de definir em pixels fixos um cabeçalho por exemplo, podemos definir que ele ocupe 90%
+do tamanho da tela. 
+-Adaptalidade
+-Além dos valores percentuais, temos EM e REM.
+-Bootstrap (framework responsivo)
+
+***Media Query***
+-folhas de estilo (CSS)
+-Media query é a utilização de media types (tipos de mídia)
+-conceito de ponto de quebra
+-breakpoint : se a tela chegar a largura máxima ele vai quebrar a tela e usar uma ação que o programador
+coloque
+
+***Design responsivo X design adaptativo
+
+-Design RESPONSIVO: Medias queries são utilizadas em conjunto com scripts para criar
+um layout fluido que se adapte por meio, sobretudo,da adequação das dimensões de seus elementos ao tamanho
+da tela do dispositivo utilizado pelo visitante.
+
+-Design ADAPTATIVO: Um site é planejado e construído com a definição de seis layouts 
+predefinidos, em que são previstos pontos de quebra para que a página se adapte às seis diferentes dimensões utilizadas
+
+***Mobile First***
+-abordagem centrada nos dispositivos móveis e na navegação no ambiente web
+-design para telas menores e posteriormente para telas maiores
+-enfoque progressivo (progressive enhancement)
+-contraponto com o desenvolvimento web tradicional: conceito de degradação graciosa (graceful degradation)
+
+As páginas web são projetadas tendo em vista dispositivos desktop e telas maiores e, posteriormente, adaptadas para dispositivos móveis e telas menores.
+
+A aplicação prática do mobile first consiste em planejar o desenvolvimento de um site priorizando os recursos e as características presentes nos dispositivos móveis, como o tamanho de tela, a largura de banda disponível e até mesmo recursos específicos, como os de localização, por exemplo.
+
+***As tecnologias HTML***
+-tecnologia fundamental da web
+-linguagem de marcação simples
+-As tags podem ser agrupadas nos seguintes tipos: Estruturais, conteúdo e semânticas.
+
+***CSS***
+-corresponde à segunda camada no tripé de tecnologias que formam o lado cliente
+-linguagem declarativa
+-controla apresentação visual de páginas WEB
+-pode ser inserido de 4 formas: inline, interno, externo e escopo
+-boa prática no CSS é usar a forma EXTERNA. Arquivo .css
+-outra boa prática é compactar o arquivo (minificação)
+-uma nova funcionalidade tem ganhado bastante espaço ultimamente no que diz respeito à CSS: os pré-processadores
+como o Sass, Less, Stylus etc
+-permite gerar CSS a partir de uma sintaxe
+-SELETORES: 
+body - Tag
+.xpto - Classes
+#camada1 - Identificadores = ID
+h1,h2 - Múltiplos
+h1 .vermelho - Hierárquicos
+a:hover - pseudo - elementos
+
+***JavaScript - Sintaxe***
+-multiparadigma (orientação a objetos, protótipos, funcional)
+-pode ser estruturado ou orientado a objeto
+-fornece interação na página web
+-permite comunicação assíncrona
+-permite bibliotecas como Jquery, Prototype e etc
+-eventos e manipulação DOM
+-oferece suporte a funções nativas para a exibição de caixas de diálogo para entrada
+de dados ou exibição de mensagens, como alertas, por exemplo
+
+
+*Tecnologias do lado servidor***
+***PHP: uma linguagem de programação SERVER SIDE***
+-permitir acesso a informações armazenadas em bancos de dados
+-Ex: Java, Python, ASP, .NET e PHP
+-PHP = hypertext Preprocessor
+-principal foco em scripts do lado servidor
+-pode ser usado por meio de scripts em linha de comando na criação de aplicações 
+em desktop com a ext PHP-GTK
+-linguagem interpretada = precisa rodar sobre um servidor web
+-os dados são convertidos em formato HTML e exibidos no navegador
+-pela simplicidade um script PHP pode conter tanto código estruturado quanto orientado a objetos
+-echo = imprime algo na tela
+-variável no PHP = $
+-é case sensitive
+-PHP permite a inclusão de um script dentro de outro script
+-para incluir um script em outro, o PHP disponibiliza algumas funções:
+INCLUDE
+REQUIRE
+INCLUDE ONCE
+REQUIRE_ONCE
+
+***Página Dinâmica***
+-A combinação das tecnologias do lado cliente com as tecnologias do lado servidor 
+produzem as páginas dinâmicas.
+-importante característica de um site dinâmico é possibilitar a utilização de 
+ferramentas de gestão de conteúdo (CMS)
+-servidor WEB = APACHE que rodaria PHP acessando um banco de dados MySQL
+-é comum criar uma classe conector no PHP
+-o JavaScript possui essencialmente duas formas para se comunicar com linguagens do lado servidor:
+por meio de APIs(application programming interface), XMLHttpRequest e FetchAPI
+-o JavaScript se comunica com o lado servidor através de uma API e associada a uma técnica de desenvolvimento
+WEB chamada AJAX
+-
+

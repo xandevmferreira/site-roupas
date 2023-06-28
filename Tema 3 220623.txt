@@ -1,0 +1,79 @@
+***CS - Folhas de estilo***
+- seletores : 
+tags: body
+classes: .xpto
+identificadores: #camada1
+múltiplos: h1,h2
+hierárquicos: h1 .vermelho
+pseudo elementos(quando o mouse está em cima) : a:hover
+
+
+Boas práticas na utilização do identificador>>>
+importante frisas que um id deve ser aplicado a apenas um elemento, enquanto a class pode ser aplicada a um ou vários elementos.
+Embora o navegador não verifique se um mesmo id foi utilizado em diferentes elementos, tal método pode trazer alguns problemas de estilizalção e comportamento uma vez que esse seletor também é bastante usado pelo JS> Frente a isso adorte a boa prática de definir os identificadores único
+
+***Seletores de atributo***
+Esses seletores utilizam nomes d eatributos dentro de colchetes, sendo possível combiná-los cvom valores. Abaixo são mostrados alguns dos seletores de atributo disponíveis:
+
+-[checked] - seleciona todos os elementos que possuem o atributo checked
+- [type='text'] - seleciona todos os elementos do tipo text
+
+***Seletores baseados em relacionamento***
+-H1 P - Qualquer elemeneto P que seja descendente (filho, neto etc) de um elemento h1
+-H1>P - Qualquer elemento P que seja filho de um elemento H1
+-H1+P - qualquer elemento P que seja o próximo irmão de um elemento H1 (ou seja, o próximo filho de um mesmo pai)
+
+***Integrando CSS a HTML***
+-CSS Inline
+-CSS interna
+-CSS externa
+-CSS em escopo
+
+***Prioridade no efeito cascata CSS***
+-Seletores de elemento(utilização apenas do nome da tag) são os de menor precedência, por serem muito genérios
+-Seletores de classe têm mais precedência que os de elemento.
+- Seletores de identificação tem mais precedência que os de classe
+
+-!important = css Hack
+
+-prioridade: id > class > tag
+
+-em questão de precedência e prioridade, no caso, quanto mais específico for a precedência melhor
+ex: p#identificador {background-color: black]
+
+***Recurso de cores***
+-cores com notação hexadecimal
+-sistema de coordenada cúbica RGB
+-sistema de coordena cilíndrica HSL, com notações hsl e hsla
+
+-@font-face = utilização de web fontes que são carregadas assim que o site inicia
+-a declaração da regra @font-face é feita pela definição de duas principais propriedades: font-family e src.
+Na primeira, definimos um nome para a familía da fonte que estamos importante, usando-o ao longo do arquivo CSS. A segunda aponta para a URL na qual o arquivo da fonte se encontra. Vamos ver a seguir a fonte Awasome sendo declarada
+
+-Funções local e format: 
+Função local> Essa função indica ao navegador que antes de fazer o dowload da fonte definida, deverá verificar se ela já está disponível na máquina do usuário
+
+Função format> também chamada de dica, essa função opcional é utilizada quando se deseja declarar vários formatos de fontes indicando justamente o formato de cada uma. 
+
+ex de aplicação do @font-face
+
+ex:  @font-face {
+	font-family: myFirstFont;
+	src: url(sansation_light.woff);
+	}
+
+***Box Model***
+-nossos boxes possuem quatro componentes principais: margem(margin), borda(border), preenchimento(padding) e conteúdo(content)
+
+-Positions::::::static, relative, fixed and absolute and sticky
+-Frameworks podem ser definidos como um conjunto de componentes reutilizáveis que permitem a otimização do processo de programação
+
+-três dos principais frameworks CSS existentes serão apresentados: Bootstrap, Foundation e Semantic UI 
+
+-Foundation e Semantic UI são framworks CSS e Javascript. Garantem a responsividade do site dialogando as duas linguagens
+Mto boas para mobile-first
+
+Precisa criar os links no head do html e importar os arquivos necessários pro framework funcionar, criar o html normalmente e usar as classes do framework no css para garantir a responsividade do site de maneira rápida, padronizada e segura
+
+-
+

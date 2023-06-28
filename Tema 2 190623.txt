@@ -1,0 +1,136 @@
+***Linguagem HTML***
+-tags textuais
+-tabelas e listas
+-formulários
+-tags semânticas ----trazem significado a determinado ponto da página
+-links 
+-estrutura
+-toda essa estrutra é representada através do document object model (DOM)
+-DOM - modelo do documento em termos de objeto separado hieraquicamente
+-elementos principais: raiz, cabeçalho (pré load), corpo(parte gráfica)
+-Topo, menus de naveção, conteúdo, barra lateral
+-tags semânticas: nav, header, aside...mostram o que significa cada pedaço do seu site
+-tags textuais(estrtura): divisões, parágrafos, âncoras...
+-LINK É ESSENCIAL SE NÃO, NÃO HAVERIA HYPER TEXTRO
+-hoje em dia não usamos mais formatações de fonte 
+-toda  a formatão é feita em folhas de estilo: CSS
+-tags semânticas são usadas poor sistemas de busca: nav, footer, header, 
+section(conteúdo genérico, main(conteúdo principal), article, aside...
+-tabelas- antigamente a formatação era na própria tabela. 
+Com o tableless foram retiradas essa forma e agora fazemos a estruturação da formatação
+e elaborar com css
+-o HTML foi criado a partir da junção de dois padrões: SGML e o HyTime
+-SGML - padrão ISO que especifica as regras para criação de linguagens de marcação que sejam
+independentes de plataforma
+-HyTime - é um padrão desenvolvido pela ISO com o objetivo de possibilitar que hiperdocumentos hipermídia pudessem ser descritos em função de sua estrutura e conteúdo e, consequentemente, utilizados por quaisquer sistemas conformantes
+
+-CONCORDÂNCIA DE DOCUMENTO - cada página precisa ser concordante com a especificação W3C oficial
+para a qual ela foi escrita
+-HTML4 - doctypes: strict, transitional e frameset
+-DOCTYPE é uma instrução e não uma declaração
+-estrutura padrão: header(cabeçalho), nav(navegação, menus, horizontal), article(conteúdo)
+dentro do conteúdo(section), barra lateral(aside), footer que é o rodapé
+-ESTRUTURA OBRIGATÓRIA HTML: DOCTYPE, HTML, HEAD, BODY
+-tags estruturais básicas: ta no vscode xande
+-comandos de semântica: <pre>: inserir texto pré formatado
+<div>Embora não seja considerada semântica, essa tag poderá ser usada para agrupar algum tipo de conteúdo que não tenha nenhuma semântica específica ou que não se encaixe bem dentro de uma tag semântica
+<span> semelhante à <div>. Entretanto, enquanto a <div> é um elemento não semântico no bloco (quando usada, quebra o conteúdo em uma seção), a <span> é embutida (não quebra o conteúdo, apenas o agrupa)
+<a> links
+<br/> quebra de linha
+<hr> linha horizontal no doc. Normalmente é utilizada quando se pretende alterar atemática de 
+um texto
+-tags textuais e semânticas
+-b, i e u : netrito, italico e sublinhado
+-abbr: abreviações
+ex: <abbr title= "World Health Organization">WHO</abbr>
+
+-Conceito de Texto SEMÂNTICO : A HTML semântica tem como objetivo principal descrever o significado do conteúdo contido em um documento HTML, a fim de torná-lo mais claro para os dispositivos que processam o documento e também para o programador que o criou ou precisará modificá-lo.
+
+***Listas***
+-ordenadas, não ordenadas e de definição.
+
+-Ordenadas: usadas quando desejamos listar dados com a necessidade de representar a sua ordenação de forma numérica ou alfabética
+-Não ordenadas: usadas quando não há necessidade de listar ordenadamente
+-De definição: usdaas quando precisamos listar itens e atribuirmos uma descrição a eles
+
+-Outra carcterística improtante das listas é que a sua marcação HTML é composta por uma tag de container ou tag PAI e por seus itens ou FILHOS. Além disso, a lista de definição possui ainda um terceiro item, que é justamente o utilizaddo para descrevê-lo. TAbela no site do curso.
+
+-Já dentro da tabela temos algumas tags de hierarquia que ajudam na organização da tabela:
+<table> Container principal da tabela
+<tr> Representa as linhas, sendo composta pelas tags relacionadas às colunas
+<td> Representa as colunas e precisa ser inserida dentro da tag dfe linha
+<th> Também representa colunas e é usada para exibir o título de uma coluna possuindo neste sentido
+função SEMÂNTICA. Assim como a tag <td>, deve estar contiga em uma tag de linha. Este elemento apresenta estilos próprios, sendo renderizado de formma difernete das  colunas comuns
+
+<thead> Armazena o cabeçalho da tabela sendo composto por linhas e colunas. Este elemento a exemplo do que vimos anteriormente tem função semântica em termos de estruturalão de conteúdo
+<tfoot> Armazena o rodabé da tabela tendo também funlção semântica em termos de estruturalção
+
+As tabelas normalmente são organizadas de maneira uniforme: linhas sobre linhas e colunas após colunas e célula ao lado de célula. Logo, as colunas costumam ter a mesma largura, assim como as linhas a mesma altura. Entretando há situações nas quais é preciso mudar um pouco essa organização. Por exemplo, pode ser necessário mesclar duas colunas ou mesmo duas ou mais linhas
+Para isso, fazemos uso de alguns atributos que tem função de destaque ao tratarmos de tags relacionadas às tabelas. São ele:::rowspan e colspan. Como  o próprio nome indica estes atributos tem a função de expandis as linhas ou colunas. Sua declaração é acompanhada de um número que indica a quantidade de celulas a serem utilizadas opara expansão da linha ou coluna.
+
+Com o padrão tableless e junto com css é pra dados tabulários. Não usamos mais tabela pra organizar páginas. 
+Agora usamos divs, css, organizamos em colunas de acordo com algum framework.
+Ainda é usada pra dados planilhados, dados do mundo real.
+
+-Os atributos colspan e rowspan são utilizados para modificar a organização de colunas e linhas em uma tabela
+
+***Estrutura básica do formulário***
+-o formulário é composto por uma tag principal, container e várias tags filhas
+-também possui tags pra informar a função dos campos do formulário, são as Labels
+
+<form> container principal do formulário
+<input> Campo do formulário. Como há diversos tipos de campos, fazemos uso do atributo type para informar o tipo
+a ser utilizado conforme veremos mais adiante
+
+<textarea> campo de texto de múltiplas linhas
+<select> e <option> campos de seleção onde o container é definido pela tag <select> e os itens pela tag <option>
+
+button - campo de botão que permite uma ação seja executada no formulário - enviar o formulário, limpar os dados e etc...
+
+label - usado para definir um título, uma legenda, que desreva para que serve cada campo do formulário
+
+<form> - action - Define a URL para a qual os dados do formulário serão enviados
+<form> - method - Define o método HTTP(POST OU GET) para envio dos dados
+<label> - for -vincula a tag <label> ao campo ao qual ela se refede. Este vínculo faz com que seja possivel clicar na label para ativar o campo relacionado
+
+<input> - minlength ou maxlength - Definem a quantidade de caracteres mínima e máxima, respectivamente, permitida em um campo
+
+<input>,<button> - type - Define o tipo do campo e sobretudo como ele se comporta
+
+<option> - value  - Este atributo também pode ser utilizado na tag <input>. Ele define o valor do campo. No caso da option, os seus valores possíveis são previamente definidos quando a página é codificada. Já na input, embora também possa ser previamente definido, normalmente é o usuário quem define o seu valor
+
+Outras tags usadas nos formulários: password, hidden, checkbox, radio, submit, reset, button...
+ Atributo	Função	Comentário
+
+
+- placeholder Exibir um texto no campo de input - Utilizado para dar uma dica ao usuário sobre o dado a ser inserido
+
+- required Determinar se um campo é obrigatório- Utilizado na validação dos dados de um formulário.
+
+- autofocus - Fixar o foco no campo - Utilizado quando desejamos que, ao carregar o formulário, um determinado campo seja focado.
+
+- pattern
+
+Validar o valor de um campo com base em uma expressão regular.
+(As RegEX – expressões regulares – podem ser consideradas um recurso de linguagem de programação para a análise e manipulação de texto.)
+
+O campo de tel. é um bom exemplo de utilização desse atributo. Com ele podemos, por exemplo, determinar a quantidade de caracteres e o formato esperado para um campo.
+
+Tipos
+
+Tipo	Função	Comentário
+
+- tel- Inserir números de telefone - Para uma melhor usabilidade, deve ser usado em conjunto com o atributo pattern.
+
+- datetime - Inserir datas com o fuso horário em UTC a partir de um calendário.
+
+- date - Inserir datas sem fuso horário a partir de um calendário.
+
+- number - Inserir números - Cria um componente diferente do imput normal, em que, por meio de setas, os números podem ser incrementados ou decrementados.
+
+-no html há dois tipos de validação: pattern e o que verifica se um campo obrigatório foi preenchido
+ex: email= precisa ter o @ pra ser validado
+
+-
+
+

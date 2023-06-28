@@ -1,0 +1,66 @@
+Já sabemos que o bootstrap funciona através da inserção de links e que podemos chamá-lo diretamente no html através de class
+
+text-center
+container
+mb-2 = margen bottom
+mb-lg-0 = margem bottom lg 0
+
+Aprendemos Breakpoints. Melhoramos a quebra de imagem (hamburguer)
+resolvemos os problemas de resolução na tabela colocando md ou seja >768(tablet)
+
+Para largura no bootstrap
+
+<div class="w-25 p-3">Width 25%</div>
+<div class="w-50 p-3">Width 50%</div>
+<div class="w-75 p-3">Width 75%</div>
+<div class="w-100 p-3">Width 100%</div>
+<div class="w-auto p-3">Width auto</div>
+
+Para altura
+
+<div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
+  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
+</div>
+
+***SASS***
+criar layouts de página personalizados, semânticos e responsivos
+
+mx-auto = margin x=os dois lados, auto
+
+Para colocar o grid da maneira correta, com breakpoint adequado para mobile...
+misturamos os dois. Na class fica: col-md-4 col-xxl-2. md e xxl indica a resolução
+no breakpoint e 4,2 são os números de coluna
+
+Método Emmit  = div*3>div*3 >>>>>faz com que o vs code crie 3 grupos de 3 divs
+
+-Para aplicar a classe de espaçamento é bem simples, basta seguir a regra do tipo+direção+valor. 
+
+Tipo = m ou p - margin ou padding
+
+Direção = t significa top ou topo e é aplicado superiormente
+b vem de bottom e é aplicado abaixo ou inferiormente
+s vem de start e se refere ao left ou lado esquerdo do elemento
+evem de end e se refere ao right ou lado direito do elemento
+x do eixo x ou horizontal, é aplicado à esquerda e direita do elemento
+y do eixo y ou vertical, é aplicado acima e abaixo do elemento
+blank aplica em todos os 4 lados do elemento
+
+Na section criada no projeto criei o d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 px-3 
+Para centralizar e dar padding pro conteúdo. Foco nos comandos flex. O flex-lg-row faz com que os ícones da section se expandam em linha reta quando chegamos a 992px na tela
+
+form-control border-secondary rounded-0
+Nesse comando ele expandiu a caixa de inserção de email, deixou retângulo a caixa e espalhou pelo width
+
+input-group = juntou o "digite aqui" com a caixa enviar
+Na caixa de digite seu email tive problemas para centralizar o item.
+No caso, usei o d-flex justify-content-center e consegui alinhar
+O objeto estava preso no lado esquerco e com este comando consegui ajustar de maneira correta
+
+-Para inserção de imagens e manter a imagem no alinhamento correto usar = img-fluid
+
+Container- ajusta o conteúdo na margem do projeto
+
